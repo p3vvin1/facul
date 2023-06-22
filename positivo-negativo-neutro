@@ -1,0 +1,8 @@
+num1 = float(input("Digite um numero e saiba se ele é positivo, negativo ou neutro : "))
+if    num1<0:
+          print("O numero digitado é negativo")
+if    num1>0:
+          print("O numero digitado é positivo")
+if    num1==0:
+          print("O numero digitado é neutro")
+print("até mais")
