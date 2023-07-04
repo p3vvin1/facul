@@ -1,0 +1,28 @@
+# entrada de dados
+valor = float(input("Qual o valor do produto? "))
+formaPgt = input("Qual a forma de pagamento (Dinheiro ou Cheque)? ")
+
+# processamento
+print(formaPgt.lower())
+if formaPgt.lower() == "dinheiro" or formaPgt.lower() == "cheque" or formaPgt.lower() == "cartão":
+  if formaPgt.lower() == "dinheiro" and valor >= 100:
+    desconto = valor * 0.10
+    print("R$", valor - desconto)
+  elif formaPgt.lower() == "cartão":
+    # perguntar a função do cartão a ser usada
+    tipoPgt = input("Qual a função do cartão (crédito ou débito)? ")
+    if tipoPgt.lower() == "crédito":
+      # ler quantidade de parcelas
+      qtdParcelas = int(input("Qual a quantidade de parcelas? "))
+      if qtdParcelas >= 1 and qtdParcelas <= 3:
+        valorParcela = valor/qtdParcelas
+        print("R$", valor)
+        print(qtdParcelas, "parcelas de R$", valorParcela)
+      else:
+        print("Quantidade de parcelas inválida")
+    else:
+      print("R$", valor)
+  else:
+    print("R$", valor)
+else:
+  print("Forma de Pagamento inválida!")
