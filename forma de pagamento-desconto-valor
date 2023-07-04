@@ -1,0 +1,14 @@
+# entrada de dados
+valor = float(input("Qual o valor do produto? "))
+formaPgt = input("Qual a forma de pagamento (Dinheiro ou Cheque)? ")
+
+# processamento
+print(formaPgt.lower())
+if formaPgt.lower() == "dinheiro" or formaPgt.lower() == "cheque":
+  if formaPgt.lower() == "dinheiro" and valor >= 100:
+    desconto = valor * 0.10
+    print("R$", valor - desconto)
+  else:
+    print("R$", valor)
+else:
+  print("Forma de Pagamento inválida!")
